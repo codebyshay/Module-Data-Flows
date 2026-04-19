@@ -1,4 +1,4 @@
-let myLibrary = [];
+const myLibrary = [];
 
 const titleInputEl = document.getElementById("title");
 const authorInputEl = document.getElementById("author");
@@ -88,7 +88,7 @@ function render() {
     let toggleReadButton = document.createElement("button");
     toggleReadButton.className = "btn btn-success";
     wasReadCell.appendChild(toggleReadButton);
-    toggleReadButton.textContent = myLibrary[i].check === false ? "No" : "Yes";
+    toggleReadButton.textContent = myLibrary[i].check ? "Yes" : "No";
 
     toggleReadButton.addEventListener("click", function () {
       myLibrary[i].check = !myLibrary[i].check;
